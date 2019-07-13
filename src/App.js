@@ -4,16 +4,17 @@ import React from 'react';
 import "./style/styles.scss" 
 import Curso from "./curso"
 import Banner from "./banner"
-import Formulario from "./formulario"
+// import Formulario from "./formulario"
 
 
 
 const App = () => (
 <>
   <Banner/>
-  <Formulario/>
-  <Curso />
-</>
+   <Curso title="React desde cero" nombre="Mizael" apellido="Paredes" price="50usd" image="https://image.freepik.com/free-vector/colorful-watercolor-background_79603-99.jpg" imageTiny="https://image.freepik.com/free-vector/colorful-watercolor-background_79603-99.jpg"/>
+  <Curso title="React desde cero" nombre="Mizael" apellido="Paredes" price="50usd" image="https://image.freepik.com/free-vector/colorful-watercolor-background_79603-99.jpg" imageTiny="https://image.freepik.com/free-vector/colorful-watercolor-background_79603-99.jpg"/>
+   <Curso title="React desde cero" nombre="Mizael" apellido="Paredes" price="50usd" image="https://image.freepik.com/free-vector/colorful-watercolor-background_79603-99.jpg" imageTiny="https://image.freepik.com/free-vector/colorful-watercolor-background_79603-99.jpg"/>
+  </>
 )
 
 export default App;
