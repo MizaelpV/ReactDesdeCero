@@ -1,35 +1,44 @@
 import React from 'react'
 import Proptypes from 'prop-types'
 
+const curso = {
+  "id": 1,
+  "title": "React desde cero",
+  "nombre": "Mizael",
+  "image": "https://image.freepik.com/free-vector/colorful-watercolor-background_79603-99.jpg",
+  "apellido": "Paredes", 
+  "price": 60,
+  "imageTiny": "https://image.flaticon.com/icons/svg/865/865138.svg"
+}
 
 
 
-
-const Curso = ({title, image, price, nombre, apellido, imageTiny}) => (
+const Curso = () => (
     <>  
     <article className="card">
     <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
-      <img src={image} alt={title}/>
+      <img src={curso.image} alt={curso.title}/>
     </div>
     <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
       <h3 className="t5 s-mb-2 s-center">
-          {title}
-      </h3>
-      <div className="s-mb-2 s-main-center">
-        <div className="card__teacher s-cross-center">
-          <div className="card__avatar s-mr-1">
-            <div className="circle img-container">
-              <img src={imageTiny} alt="lion"/>
-            </div>
-          </div>
-          <span className="small">{`${nombre} ${apellido}`}</span>
+          {curso.title}
+      </h3> 
+    <div className="s-mb-2 s-main-center">
+      <div className="card__teacher s-cross-center">
+        <div className="card__avatar s-mr-1">
+          <div className="circle img-container">
+            <img src={curso.imageTiny} alt="imagenPequeña"/>
+              </div>
+              </div>
+          <span className="small">{`${curso.nombre} ${curso.apellido}`}</span>
         </div>
       </div>
       <div className="s-main-center">
-        <a className="button--ghost-alert button--tiny" href="https://www.google.com">{`$${price}`}</a>
+        <a className="button--ghost-alert button--tiny" href="https://www.google.com">{`$${curso.price}`}</a>
       </div>
     </div>
   </article>
+  
   </>
 )
 
