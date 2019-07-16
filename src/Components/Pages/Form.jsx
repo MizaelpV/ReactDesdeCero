@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 
-class Formulario extends Component {
+class Form extends Component {
     constructor(props){
         super(props)
 
@@ -60,8 +60,8 @@ class Formulario extends Component {
             <span>{`Tu correo es: ${this.state.correo}`}</span>
         </div>
 </div>
-    )
-  }
+   )
+}
   componentDidMount(){
       //let elemento = document.getElementById('element')
         // this.intervaloFecha = setInterval(() => {
@@ -78,4 +78,4 @@ class Formulario extends Component {
  }
 
 }
-export default Formulario 
+export default Form 
