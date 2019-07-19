@@ -3,13 +3,15 @@ import {connect} from "react-redux"
 
 const CarCounter = ({carLength}) => (
     <li>
-        <button className="button tiny ghost">{`Carrito: ${carLength.length}`}</button>
+        <button className="button tiny ghost">
+        {`Carrito: ${carLength.length}`}
+        </button>
     </li>
 )
 
 const mapStateToProps = state => (
     {
-        carLength: state.car
+        carLength: state.rootReducer.car
     }
 )
 

@@ -1,5 +1,5 @@
     
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import useCourse from "../CustomHooks/useCourse";
 
 const Course = ({ match }) => {
@@ -19,7 +19,7 @@ const Course = ({ match }) => {
                     <div className="ed-grid l-block">
                       <h1 className="m-cols-3"> { course.title } </h1>
                       <img className="m-cols-1" src={ course.image } alt={course.title}/>
-                      <p className="m-cols-2">Profesor:{course.nombre} {course.apellido} </p>
+                      <p className="m-cols-3">Profesor: {course.nombre} {course.apellido} </p>
                     </div>
                     <div className="ed-grid">
                       <h2>Escribe tu comentario</h2>

@@ -1,8 +1,10 @@
 import React from 'react'
 import Proptypes from 'prop-types'
 import {Link} from "react-router-dom"
+import {connect} from "react-redux"
+import { addToCar,removeFromCar } from '../../redux/actionsCreators';
 
-const CourseCard = ({title, image, price, nombre, apellido, imageTiny, id}) => (
+const CourseCard = ({title, image, price, nombre, apellido, imageTiny, id, addCourseToCar, car, removeCourseFromCar}) => (
     <>  
     <article className="card">
     <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
@@ -25,7 +27,18 @@ const CourseCard = ({title, image, price, nombre, apellido, imageTiny, id}) => (
         </div>
       </div>
       <div className="s-main-center">
-        <a className="button--ghost-alert button--tiny" href="https://www.google.com">{`$${price}`}</a>
+      {car.find(a => a === id)
+      ? <button className="button--ghost-alert button--tiny"
+      onClick={() => removeCourseFromCar(id)}>
+      Remover del carrito
+      </button>
+      : <button className="button--ghost-alert button--tiny" 
+        onClick={() => addCourseToCar(id)}>
+        {
+       `$${price} USD`
+          }
+        </button>
+      }
       </div>
     </div>
   </article>
@@ -48,4 +61,22 @@ CourseCard.defaultProps = {
   apellido: "Paredes",
   imageTiny: "https://images.techhive.com/images/article/2016/01/thinkstockphotos-481493125-100638928-large.jpg"
 }
-export default CourseCard
+
+const mapStateToProps = state => ({
+  car:state.rootReducer.car
+})
+
+const dispatchToProps = dispatch => ({
+  addCourseToCar(id) {
+    dispatch (
+      addToCar(id)
+    )
+  },
+  removeCourseFromCar(id) {
+    dispatch(
+      removeFromCar(id)
+    )
+  }
+})
+
+export default  connect(mapStateToProps, dispatchToProps)(CourseCard)
