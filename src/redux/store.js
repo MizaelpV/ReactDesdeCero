@@ -44,7 +44,4 @@ const coursesReducer = (state = initialCourses, action) => {
     return state
 }
 
-
-
-
 export default createStore(combineReducers({rootReducer,coursesReducer}), applyMiddleware(thunk))

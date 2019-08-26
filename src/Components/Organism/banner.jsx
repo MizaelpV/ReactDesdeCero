@@ -1,18 +1,13 @@
  import React from "react"
 
 const Banner = () => (
-    <div className="main-banner img-container l-section" id="main-banner">
-  <div className="ed-grid lg-grid-6">
-    <div className="lg-cols-4 lg-x-2">
-      <img className="main-banner__img" src="https://image.freepik.com/free-vector/cutout-background_23-2148004241.jpg" alt="sjksc"/>
-      <div className="main-banner__data s-center">
-        <p className="t2 s-mb-0">Título del banner</p>
-        <p> Subtítulo del banner</p>
-        <a href="www.google.com" className="button">Botón del banner</a>
-      </div>
-    </div>
-  </div>
-</div>
+    <>
+   
+<img className="bgPicture" src="https://sc01.alicdn.com/kf/HTB1h5_UUH2pK1RjSZFsq6yNlXXaC/232950967/HTB1h5_UUH2pK1RjSZFsq6yNlXXaC.jpg_.webp" alt=""/>
+
+
+
+</>
 )
     
 export default Banner 

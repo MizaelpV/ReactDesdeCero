@@ -1,2 +1,28 @@
 @import "~ed-grid";
 @import "~edteam-style-guides/edteam-style-guides";
+
+.menuLink:hover{
+color: #208eeb;
+text-decoration: underline;
+}
+
+.bgPicture{
+   width:  100%;
+   opacity: 0.75;
+   position: fixed;
+   z-index: -1;
+}
+
+.logoSize{
+    width: 57%;
+}
+
+.socialMedia{
+    width: 4.7%;
+    margin: 0;
+    padding: 8px;
+    position: absolute;
+    top: 30%;
+    border: 6px solid #ffffff;
+    background: #f1f1f1;  
+}

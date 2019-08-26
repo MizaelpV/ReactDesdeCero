@@ -3,14 +3,14 @@ import axios from "axios";
 
 
 const useCourse = id => {
-    const [state, setState] = useState({ })
+    const [course, setCourse] = useState({})
 
     useEffect(() => {
        axios.get(`http://my-json-server.typicode.com/MizaelpV/JsonDB/cursos/${id}`)
-    .then(resp => setState(resp.data)
+    .then(resp => setCourse(resp.data)
     )
-      },[])
-      return state
+      }, [id])
+      return course
 }
 
 export default useCourse

@@ -1,5 +1,4 @@
-    
-import React, { useState } from "react"
+import React, { useState} from "react"
 import useCourse from "../CustomHooks/useCourse";
 
 const Course = ({ match }) => {
@@ -33,5 +32,4 @@ const Course = ({ match }) => {
         </div>
     )
 }
-
 export default Course
