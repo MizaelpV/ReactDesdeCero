@@ -1,3 +1,7 @@
+
+This is a react project to practice building everything in react, with react-hooks, Atomic Design (estructure of the project), and HOC (high order components). Using Libraries like axios to fetch data.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
